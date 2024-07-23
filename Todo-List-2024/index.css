@@ -1,0 +1,57 @@
+/* * {
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+  box-sizing: border-box;
+} */
+
+.container {
+  margin: auto 100px;
+  height: 20vh;
+  box-sizing: border-box;
+}
+
+.input-container {
+  display: flex;
+  margin: 25px 0;
+}
+
+.input-element {
+  border: 1 rgb(150, 150, 150);
+}
+
+.add-button {
+  width: 50px;
+}
+
+.list-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
+  padding: 0;
+  position: relative;
+  list-style-position: inside;
+}
+
+.list-item {
+  text-align: left;
+  width: auto;
+  list-style: none;
+  background-color: aqua;
+  padding: 20px;
+}
+
+.remove-button {
+  width: 20px;
+  margin-left: 10px;
+  margin-top: 2px;
+  z-index: 2;
+  /* position: absolute;
+  top: 0; */
+}
+
+.date {
+  margin-top: 20px;
+}
