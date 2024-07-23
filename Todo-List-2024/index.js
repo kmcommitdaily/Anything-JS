@@ -48,16 +48,13 @@ function renderSavedValue() {
     });
 
     listItem.appendChild(removeButton);
-    // listContainer.insertBefore(listItem, listContainer.firstChild);
+
     listContainer.appendChild(listItem);
   });
 }
 
 function removeSaved(timestamp) {
   let savedValues = JSON.parse(localStorage.getItem('savedValues')) || [];
-  // const index = savedValues.indexOf('savedValues');
-  // savedValues.splice(index, 1);
-
   const index = savedValues.findIndex((item) => item.timestamp === timestamp);
 
   if (index > -1) {
@@ -66,26 +63,7 @@ function removeSaved(timestamp) {
   }
 }
 
-// Simple To Do List
-// this is to apply my object, function and DOM knowledge
-// when i clicked the add button +
-// the input value will be save to local storage +
-// and will be posted under list Container +
-// the value that are posted should not disappear when i reload my browser
-// the saved value should be listed in array whenever i put or add another inputValue
-
-//Improving project
-// to apply: numbers, string, and array methods
-
-/** Numbers Method:
-Objective: Add functionality to sort tasks by their due date or priority level. For example, if each task has a numerical priority or deadline, implement a feature that sorts the task list based on these numbers.
-
-
-* put number before list
-* sort task from more recent to oldest
-   > compute the array length
-   > get the last index of an array
-   > put it on top
+/*
 
 
 String Method:
