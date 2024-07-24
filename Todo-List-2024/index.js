@@ -14,6 +14,12 @@ addBtnEl.addEventListener('click', () => {
   }
 });
 
+function handleCheckbox(event) {
+  const checkbox = event.target;
+  const listItem = checkbox.closest('.list-item');
+  listItem.style.opacity = checkbox.checked ? '50%' : '100%';
+}
+
 function saveToLocalStorage(value) {
   let savedValues = JSON.parse(localStorage.getItem('savedValues')) || [];
 
@@ -35,9 +41,27 @@ function renderSavedValue() {
     date.className = 'date';
     date.textContent = `(Added on ${item.timestamp})`;
 
+    let checkBox = document.createElement('input');
+    checkBox.type = 'checkbox';
+    checkBox.className = 'checkbox';
+
+    checkBox.addEventListener('change', handleCheckbox);
+
+    let contentWrapper = document.createElement('div');
+    contentWrapper.className = 'item-content-wrapper';
+
+    contentWrapper.appendChild(checkBox);
+
+    let textSpan = document.createElement('span');
+    textSpan.innerHTML = `<span>${item.text}</span>`;
+
+    contentWrapper.appendChild(textSpan);
+    contentWrapper.appendChild(date);
     let listItem = document.createElement('li');
-    listItem.innerHTML = `${item.text}  <br> ${date.outerHTML}`;
     listItem.className = 'list-item';
+
+    listItem.appendChild(contentWrapper);
+    // listItem.appendChild(checkBox);
 
     let removeButton = document.createElement('button');
     removeButton.textContent = 'x';
