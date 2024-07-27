@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.name-container {
+  margin: 200px 0 10px;
+}
+
+.country-container {
+  margin-bottom: 10px;
+}
+
+.story {
+  background-color: green;
+  height: 300px;
+  width: 300px;
+  margin: 10px auto;
+}

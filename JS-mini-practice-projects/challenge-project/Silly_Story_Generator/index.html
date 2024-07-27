@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Silly Story Generator</title>
+  </head>
+  <body>
+    <div class="name-container">
+      <label for="name">Enter Costum Name: </label>
+      <input class="name-input" type="text" id="name" />
+    </div>
+
+    <div class="country-container">
+      <label for="philippines">PH</label>
+      <input class="ph-radio" type="radio" id="philippines" />
+      <label for="american">AM</label>
+      <input class="am-radio" type="radio" id="american" />
+    </div>
+
+    <input
+      class="generate-btn"
+      type="submit"
+      name="Generator"
+      id="submit-btn"
+      value="Generate Random Story" />
+
+    <p class="story"></p>
+  </body>
+  <script src="index.js"></script>
+</html>

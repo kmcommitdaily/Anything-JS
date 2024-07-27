@@ -21,6 +21,11 @@ const filipinoGreetings = [
 
 function checkNationality() {
   let yourName = nameField.value;
+  const firstLetter = yourName.slice(0, 1);
+  const capitalized = yourName.replace(firstLetter, firstLetter.toUpperCase());
+
+  // how can i make this function reusable?
+
   let nationalityVal = nationality.value;
 
   let randomFilipinoGreeting = Math.floor(
@@ -31,9 +36,9 @@ function checkNationality() {
   );
 
   if (nationalityVal === 'american') {
-    paraGreetings.textContent = `${americanGreetings[randomAmericaGreeting]} ${yourName}`;
+    paraGreetings.textContent = `${americanGreetings[randomAmericaGreeting]} ${capitalized}`;
   } else if (nationalityVal === 'filipino') {
-    paraGreetings.textContent = `${filipinoGreetings[randomFilipinoGreeting]} ${yourName}`;
+    paraGreetings.textContent = `${filipinoGreetings[randomFilipinoGreeting]} ${capitalized}`;
   } else {
     paraGreetings.textContent = 'Please Select a Nationality';
   }

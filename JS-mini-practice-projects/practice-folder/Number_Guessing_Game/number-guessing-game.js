@@ -11,6 +11,8 @@ let guessCount = 1;
 let resetButton;
 
 function checkGuess() {
+  // how can i make this function reusable?
+
   const userGuess = Number(guessField.value);
 
   if (guessCount === 1) {
