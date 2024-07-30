@@ -27,4 +27,12 @@ function renderSearchHistory() {
   searchInput.focus();
 }
 
+searchInput.addEventListener('keydown', searchEnter);
+
+function searchEnter(event) {
+  if (event.key === 'Enter') {
+    renderSearchHistory();
+  }
+}
+
 searchBtn.addEventListener('click', renderSearchHistory);
