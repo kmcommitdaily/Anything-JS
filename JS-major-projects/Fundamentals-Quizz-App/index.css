@@ -1,0 +1,20 @@
+* {
+  text-align: center;
+}
+
+.question {
+  background-color: green;
+  width: 200px;
+  margin: 20px auto;
+  height: 100px;
+  padding: 20px;
+}
+
+.choice {
+  list-style-type: none;
+  margin-left: 5px;
+}
+
+.score {
+  margin-top: 10px;
+}

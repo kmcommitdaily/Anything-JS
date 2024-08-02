@@ -1,0 +1,218 @@
+[
+  {
+    "question": "Which of the following is the correct syntax to print a page using JavaScript?",
+    "answers": [
+      { "text": "window.print();", "correct": true },
+      { "text": "browser.print();", "correct": false },
+      { "text": "navigator.print();", "correct": false },
+      { "text": "document.print();", "correct": false }
+    ]
+  },
+  {
+    "question": "Which built-in method removes the last element from an array and returns that element?",
+    "answers": [
+      { "text": "last()", "correct": false },
+      { "text": "get()", "correct": false },
+      { "text": "pop()", "correct": true },
+      { "text": "None of the above", "correct": false }
+    ]
+  },
+  {
+    "question": "Which built-in method returns the calling string value converted to lower case?",
+    "answers": [
+      { "text": "toLowerCase()", "correct": true },
+      { "text": "toLower()", "correct": false },
+      { "text": "changeCase(case)", "correct": false },
+      { "text": "None of the above", "correct": false }
+    ]
+  },
+  {
+    "question": "Which of the following function of Number object returns a string value version of the current number?",
+    "answers": [
+      { "text": "toString()", "correct": true },
+      { "text": "toFixed()", "correct": false },
+      { "text": "toLocaleString()", "correct": false },
+      { "text": "toPrecision()", "correct": false }
+    ]
+  },
+  {
+    "question": "Which of the following is correct about features of JavaScript?",
+    "answers": [
+      {
+        "text": "JavaScript is a lightweight, interpreted programming language.",
+        "correct": true
+      },
+      {
+        "text": "JavaScript is designed for creating network-centric applications.",
+        "correct": false
+      },
+      {
+        "text": "JavaScript is complementary to and integrated with Java.",
+        "correct": false
+      },
+      { "text": "All of the above", "correct": false }
+    ]
+  },
+  {
+    "question": "Which of the following is the correct syntax to create a cookie using JavaScript?",
+    "answers": [
+      {
+        "text": "document.cookie = 'key1 = value1; key2 = value2; expires = date';",
+        "correct": true
+      },
+      {
+        "text": "browser.cookie = 'key1 = value1; key2 = value2; expires = date';",
+        "correct": false
+      },
+      {
+        "text": "window.cookie = 'key1 = value1; key2 = value2; expires = date';",
+        "correct": false
+      },
+      {
+        "text": "navigator.cookie = 'key1 = value1; key2 = value2; expires = date';",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Which built-in method sorts the elements of an array?",
+    "answers": [
+      { "text": "changeOrder(order)", "correct": false },
+      { "text": "order()", "correct": false },
+      { "text": "sort()", "correct": true },
+      { "text": "None of the above", "correct": false }
+    ]
+  },
+  {
+    "question": "Which of the following is a valid type of function JavaScript supports?",
+    "answers": [
+      { "text": "named function", "correct": false },
+      { "text": "anonymous function", "correct": false },
+      { "text": "Both the above", "correct": true },
+      { "text": "None of the above", "correct": false }
+    ]
+  },
+  {
+    "question": "Which of the following is not a valid JavaScript variable name?",
+    "answers": [
+      { "text": "2names", "correct": true },
+      { "text": "_first_and_last_names", "correct": false },
+      { "text": "FirstAndLast", "correct": false },
+      { "text": "None of the above", "correct": false }
+    ]
+  },
+  {
+    "question": "Which of the following function of String object returns the index within the calling String object of the first occurrence of the specified value?",
+    "answers": [
+      { "text": "substr()", "correct": false },
+      { "text": "search()", "correct": false },
+      { "text": "lastIndexOf()", "correct": false },
+      { "text": "indexOf()", "correct": true }
+    ]
+  },
+  {
+    "question": "Which of the following function of Array object calls a function for each element in the array?",
+    "answers": [
+      { "text": "concat()", "correct": false },
+      { "text": "every()", "correct": false },
+      { "text": "forEach()", "correct": true },
+      { "text": "filter()", "correct": false }
+    ]
+  },
+  {
+    "question": "Which of the following function of Array object adds one or more elements to the end of an array and returns the new length of the array?",
+    "answers": [
+      { "text": "pop()", "correct": false },
+      { "text": "push()", "correct": true },
+      { "text": "join()", "correct": false },
+      { "text": "map()", "correct": false }
+    ]
+  },
+  {
+    "question": "Which of the following function of Array object extracts a section of an array and returns a new array?",
+    "answers": [
+      { "text": "reverse()", "correct": false },
+      { "text": "shift()", "correct": false },
+      { "text": "slice()", "correct": true },
+      { "text": "some()", "correct": false }
+    ]
+  },
+  {
+    "question": "Which of the following function of Array object adds and/or removes elements from an array?",
+    "answers": [
+      { "text": "toSource()", "correct": false },
+      { "text": "sort()", "correct": false },
+      { "text": "splice()", "correct": true },
+      { "text": "unshift()", "correct": false }
+    ]
+  },
+  {
+    "question": "Which of the following function of String object returns the characters in a string between two indexes into the string?",
+    "answers": [
+      { "text": "slice()", "correct": true },
+      { "text": "split()", "correct": false },
+      { "text": "substr()", "correct": false },
+      { "text": "substring()", "correct": false }
+    ]
+  },
+  {
+    "question": "Which of the following function of String object returns a string representing the specified object?",
+    "answers": [
+      { "text": "toLocaleUpperCase()", "correct": false },
+      { "text": "toUpperCase()", "correct": false },
+      { "text": "toString()", "correct": true },
+      { "text": "substring()", "correct": false }
+    ]
+  },
+  {
+    "question": "Which of the following is true about cookie handling in JavaScript?",
+    "answers": [
+      {
+        "text": "JavaScript can manipulate cookies using the cookie property of the Document object.",
+        "correct": true
+      },
+      {
+        "text": "JavaScript can read, create, modify, and delete the cookie or cookies that apply to the current web page.",
+        "correct": false
+      },
+      { "text": "Both of the above.", "correct": false },
+      { "text": "None of the above", "correct": false }
+    ]
+  },
+  {
+    "question": "Which of the following is correct about features of JavaScript?",
+    "answers": [
+      {
+        "text": "JavaScript is a lightweight, interpreted programming language.",
+        "correct": false
+      },
+      {
+        "text": "JavaScript is designed for creating network-centric applications.",
+        "correct": false
+      },
+      {
+        "text": "JavaScript is complementary to and integrated with Java.",
+        "correct": false
+      },
+      { "text": "All of the above", "correct": true }
+    ]
+  },
+  {
+    "question": "Which of the following is correct about modern JavaScript?",
+    "answers": [
+      { "text": "JavaScript is an object-oriented language.", "correct": true },
+      { "text": "JavaScript is an object-based language.", "correct": false },
+      { "text": "JavaScript is a procedural language.", "correct": false },
+      { "text": "None of the above", "correct": false }
+    ]
+  },
+  {
+    "question": "Inside which HTML element do we put the JavaScript?",
+    "answers": [
+      { "text": "<script>", "correct": true },
+      { "text": "<js>", "correct": false },
+      { "text": "<scripting>", "correct": false },
+      { "text": "<javascript>", "correct": false }
+    ]
+  }
+]
