@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+.calc-container > .calc-child {
+  /* background-color: rgb(224, 218, 218); */
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  margin-left: 5px;
+  border-radius: 10%;
+}
+
+.divide,
+.multiply,
+.minus,
+.plus,
+.equal {
+  background-color: rgb(235, 130, 17);
+  font-size: 1.5rem;
+}
+
+.calc-container {
+  width: 250px;
+  margin: 0 auto;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.main-container {
+  background-color: grey;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 50px auto;
+  padding: 20px 0;
+  border-radius: 10%;
+}
+
+.result-input {
+  width: 250px;
+  margin-bottom: 10px;
+  background-color: rgb(184, 181, 181);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  height: 25px;
+}
+.reset {
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: 30px;
+  border-radius: 5px;
+  background-color: green;
+}

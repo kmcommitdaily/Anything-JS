@@ -59,6 +59,7 @@ function displayQuestion() {
 
     testContainer.appendChild(answerBtn);
   }
+  console.log(data);
 }
 
 function handleChoiceClick(event) {
@@ -113,5 +114,7 @@ function handleCreateTest() {
 }
 
 function addQuestion() {}
+
+console.log(questions);
 
 takeTestBtn.addEventListener('click', fetchQuestions);
