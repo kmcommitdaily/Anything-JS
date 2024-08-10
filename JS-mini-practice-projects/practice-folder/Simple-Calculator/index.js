@@ -2,10 +2,6 @@ const resultInput = document.querySelector('.result-input');
 const calcContainer = document.querySelector('.calc-container');
 const buttons = document.querySelectorAll('.calc-container button');
 
-const multiply = document.querySelector('.multiply');
-const minus = document.querySelector('.minus');
-const plus = document.querySelector('.plus');
-const divide = document.querySelector('.divide');
 const equals = document.querySelector('.equal');
 const resetBtn = document.querySelector('.reset');
 
@@ -16,37 +12,50 @@ let result;
 resultInput.value = 0;
 
 buttons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const operator = ['x', '+', '-', '÷'];
-    const value = button.innerHTML;
-
-    if (calculationDone) {
-      if (operator.includes(value)) {
-        toCalculate = [result];
-        resultInput.value = toCalculate;
-        calculationDone = false;
-        console.log(result);
-      } else {
-        toCalculate = [];
-        resultInput.value = '';
-        calculationDone = false;
-      }
-    }
-
-    if (!isNaN(parseFloat(value))) {
-      if (currentOperation) {
-        toCalculate.length > 0 && toCalculate.push(currentOperation);
-        currentOperation = null;
-      }
-      toCalculate.push(value);
-      resultInput.value = toCalculate.join('');
-    } else if (operator.includes(value)) {
-      currentOperation = value;
-    }
-  });
+  button.addEventListener('click', () => handleCalculation(button));
 });
 
-equals.addEventListener('click', () => {
+equals.addEventListener('click', handleResult);
+
+resetBtn.addEventListener('click', () => {
+  resultInput.value = 0;
+  toCalculate = [];
+  currentOperation = null;
+  calculationDone = false;
+});
+
+//functions
+
+function handleCalculation(button) {
+  const operator = ['x', '+', '-', '÷'];
+  const value = button.innerHTML;
+
+  if (calculationDone) {
+    if (operator.includes(value)) {
+      toCalculate = [result];
+      resultInput.value = toCalculate;
+      calculationDone = false;
+      console.log(result);
+    } else {
+      toCalculate = [];
+      resultInput.value = '';
+      calculationDone = false;
+    }
+  }
+
+  if (!isNaN(parseFloat(value))) {
+    if (currentOperation) {
+      toCalculate.length > 0 && toCalculate.push(currentOperation);
+      currentOperation = null;
+    }
+    toCalculate.push(value);
+    resultInput.value = toCalculate.join('');
+  } else if (operator.includes(value)) {
+    currentOperation = value;
+  }
+}
+
+function handleResult() {
   if (toCalculate.length > 0) {
     let expression = toCalculate.join('');
     console.log(expression);
@@ -65,11 +74,4 @@ equals.addEventListener('click', () => {
       calculationDone = false;
     }
   }
-});
-
-resetBtn.addEventListener('click', () => {
-  resultInput.value = 0;
-  toCalculate = [];
-  currentOperation = null;
-  calculationDone = false;
-});
+}
