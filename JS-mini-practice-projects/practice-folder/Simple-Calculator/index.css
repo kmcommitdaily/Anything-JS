@@ -1,6 +1,12 @@
 * {
   box-sizing: border-box;
 }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 
 .calc-container > .calc-child {
   /* background-color: rgb(224, 218, 218); */
@@ -36,9 +42,13 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 50px auto;
+
   padding: 20px 0;
   border-radius: 10%;
+}
+
+.history-area {
+  color: green;
 }
 
 .result-input {
@@ -51,10 +61,22 @@
   border-radius: 5px;
   height: 25px;
 }
-.reset {
+.util-btn {
   margin-bottom: 5px;
   margin-left: auto;
   margin-right: 30px;
-  border-radius: 5px;
+}
+
+.util-btn > button {
   background-color: green;
+  border-radius: 5px;
+}
+
+.reset {
+  width: 50px;
+}
+
+.main-container,
+.aside {
+  margin-top: 100px;
 }
