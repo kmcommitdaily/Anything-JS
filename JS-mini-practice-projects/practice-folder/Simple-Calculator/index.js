@@ -12,19 +12,8 @@ const resetBtn = document.querySelector('.reset');
 let toCalculate = [];
 let currentOperation = null;
 let calculationDone = false;
+let result;
 resultInput.value = 0;
-
-const operationArray = [multiply, minus, plus, divide, equals];
-
-function disabledButton(button) {
-  return (button.disabled = true);
-}
-
-function enabledButton(button) {
-  return (button.disabled = false);
-}
-
-operationArray.forEach((button) => disabledButton(button));
 
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
@@ -32,20 +21,25 @@ buttons.forEach((button) => {
     const value = button.innerHTML;
 
     if (calculationDone) {
-      // If the last action was "=" start a new calculation
-      toCalculate = [];
-      resultInput.value = '';
-      calculationDone = false;
+      if (operator.includes(value)) {
+        toCalculate = [result];
+        resultInput.value = toCalculate;
+        calculationDone = false;
+        console.log(result);
+      } else {
+        toCalculate = [];
+        resultInput.value = '';
+        calculationDone = false;
+      }
     }
 
     if (!isNaN(parseFloat(value))) {
       if (currentOperation) {
-        toCalculate.push(currentOperation);
+        toCalculate.length > 0 && toCalculate.push(currentOperation);
         currentOperation = null;
       }
       toCalculate.push(value);
       resultInput.value = toCalculate.join('');
-      operationArray.forEach((button) => enabledButton(button));
     } else if (operator.includes(value)) {
       currentOperation = value;
     }
@@ -60,11 +54,10 @@ equals.addEventListener('click', () => {
     expression = expression.replace(/x/g, '*').replace(/÷/g, '/');
 
     try {
-      const result = eval(expression);
+      result = eval(expression);
       resultInput.value = Number.isInteger(result) ? result : result.toFixed(2);
       toCalculate = [result];
-      calculationDone = true; // Set flag to true after "=" is pressed
-      operationArray.forEach((button) => disabledButton(button));
+      calculationDone = true;
     } catch (error) {
       resultInput.value = 'Error';
       console.error('Error evaluating expression:', error);
@@ -78,5 +71,5 @@ resetBtn.addEventListener('click', () => {
   resultInput.value = 0;
   toCalculate = [];
   currentOperation = null;
-  operationArray.forEach((button) => disabledButton(button));
+  calculationDone = false;
 });
